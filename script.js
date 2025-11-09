@@ -1,6 +1,6 @@
 //your JS code here. If required.
 (function () {
-	const input = document.getElementById('ageInput');
+	const input = document.getElementById('ip');
 	const btn = document.getElementById('btn');
 	const output = document.getElementById('output');
 
@@ -21,7 +21,7 @@
 				output.textContent = `Result: ${n}`;
 				return n;
 			})
-			.then((n) => wait(1000, n * 2))
+			.then((n) => wait(2000, n * 2))
 			.then((n) => {
 				output.textContent = `Result: ${n}`;
 				return n;
@@ -32,6 +32,11 @@
 				return n;
 			})
 			.then((n) => wait(1000, n / 2))
+			.then((n) => {
+				output.textContent = `Result: ${n}`;
+				return n;
+			})
+			.then((n) => wait(1000, n + 10))
 			.then((n) => {
 				output.textContent = `Final Result: ${n}`;
 			})
